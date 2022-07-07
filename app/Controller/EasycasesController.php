@@ -437,7 +437,6 @@ class EasycasesController extends AppController
                         $oldname = $name;
                         $t_displayname = $oldname;
                         $ext1 = substr(strrchr($oldname, "."), 1);
-                        #$ext1 = $ext1 == 'tif' ? 'png' : $ext1;
                         $message = $this->Format->validateFileExt($ext1);
                         if ($message == "success") {
                             $tot = strlen($oldname);
