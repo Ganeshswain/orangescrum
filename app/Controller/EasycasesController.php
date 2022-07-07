@@ -567,9 +567,6 @@ class EasycasesController extends AppController
     {
         $retStatus = array('is_paste_image'=>0,'comment'=>$comment, 'uid'=>0);
         if ((!empty($comment) && stristr($comment, '<img')) || (!empty($edtd_msg) && stristr($edtd_msg, '<img'))) {
-            /*$gh = fopen('mytest.txt','a');
-            fwrite($gh, $comment);
-            fclose($gh);*/
             if (!empty($edtd_msg)) {
                 $doc = new DOMDocument();
                 $doc->loadHTML($edtd_msg);
